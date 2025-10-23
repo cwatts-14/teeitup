@@ -384,6 +384,30 @@ class WO1Implementation:
                 assigned_to="dba@company.com",
                 tags=["database", "optimization", "performance"],
                 metadata={"component": "database", "version": "1.5.0"}
+            ),
+            WorkOrder(
+                id="WO-6",
+                title="Implement user notification system",
+                description="Create a comprehensive notification system for work order updates, status changes, and deadline reminders.",
+                status=WorkOrderStatus.QUEUED,
+                priority=WorkOrderPriority.MEDIUM,
+                created_at=datetime.now() - timedelta(hours=4),
+                updated_at=datetime.now() - timedelta(hours=3),
+                assigned_to="backend@company.com",
+                tags=["feature", "notifications", "user-experience"],
+                metadata={"component": "backend", "version": "2.3.0"}
+            ),
+            WorkOrder(
+                id="WO-7",
+                title="Security audit and vulnerability assessment",
+                description="Conduct comprehensive security audit of the system and address any identified vulnerabilities.",
+                status=WorkOrderStatus.IN_PROGRESS,
+                priority=WorkOrderPriority.HIGH,
+                created_at=datetime.now() - timedelta(days=2),
+                updated_at=datetime.now() - timedelta(hours=2),
+                assigned_to="security@company.com",
+                tags=["security", "audit", "vulnerability", "critical"],
+                metadata={"component": "security", "version": "1.0.0"}
             )
         ]
         return sample_orders
@@ -400,7 +424,7 @@ class WO1Implementation:
             
             # Test priority indexing
             high_priority = self.index.get_work_orders_by_priority(WorkOrderPriority.HIGH)
-            if len(high_priority) >= 2:  # WO-1 and WO-2
+            if len(high_priority) >= 3:  # WO-1, WO-2, and WO-7
                 tests_passed.append("Priority-based indexing")
             
             # Test tag indexing
@@ -410,7 +434,7 @@ class WO1Implementation:
             
             # Test statistics
             stats = self.index.get_statistics()
-            if stats["total_work_orders"] >= 5:  # WO-1 + 4 samples
+            if stats["total_work_orders"] >= 7:  # WO-1 + 6 samples
                 tests_passed.append("Statistics generation")
             
             print(f"✅ Indexing tests passed: {len(tests_passed)}")
@@ -467,7 +491,7 @@ class WO1Implementation:
             # Verify export file has content
             with open(export_file, "r") as f:
                 export_data = json.load(f)
-                if "work_orders" in export_data and len(export_data["work_orders"]) >= 5:
+                if "work_orders" in export_data and len(export_data["work_orders"]) >= 7:
                     tests_passed.append("Export functionality")
             
             # Test import
@@ -476,7 +500,7 @@ class WO1Implementation:
             
             # Verify import worked
             imported_stats = new_index.get_statistics()
-            if imported_stats["total_work_orders"] >= 5:
+            if imported_stats["total_work_orders"] >= 7:
                 tests_passed.append("Import functionality")
             
             # Clean up test file

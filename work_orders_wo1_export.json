@@ -1,0 +1,193 @@
+{
+  "work_orders": [
+    {
+      "id": "WO-1",
+      "title": "Implement Work Order Indexing System for 8090 Integrations",
+      "description": "\n            Implement a comprehensive work order indexing system that can discover, \n            index, and manage work orders from the Factory.8090.ai service. This includes:\n            \n            1. Work order discovery from 8090 integrations using browser automation\n            2. Full-text search capabilities across work order titles, descriptions, and tags\n            3. Status and priority filtering (queued, in_progress, completed, etc.)\n            4. Command-line interface for work order management\n            5. Export/import functionality for data portability\n            6. Real-time statistics and monitoring\n            7. Comprehensive error handling and logging\n            \n            Technical Requirements:\n            - Use Playwright for browser automation\n            - Implement structured logging with structlog\n            - Support multiple work order statuses and priorities\n            - Provide RESTful API-like interface for work order operations\n            - Include comprehensive test coverage\n            - Follow security best practices for credential management\n            ",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2025-10-23T04:02:56.340775",
+      "updated_at": "2025-10-23T04:02:56.340788",
+      "assigned_to": "ai-assistant@cursor.com",
+      "due_date": null,
+      "tags": [
+        "implementation",
+        "work-order",
+        "indexing",
+        "8090",
+        "integration",
+        "wo-1"
+      ],
+      "metadata": {
+        "component": "work_order_system",
+        "version": "1.0.0",
+        "estimated_hours": 40,
+        "complexity": "high",
+        "dependencies": [
+          "playwright",
+          "structlog",
+          "httpx",
+          "pydantic"
+        ],
+        "deliverables": [
+          "work_order_indexer.py",
+          "work_order_cli.py",
+          "example_work_order_indexing.py",
+          "requirements.txt",
+          "comprehensive documentation"
+        ]
+      },
+      "source": "8090_factory"
+    },
+    {
+      "id": "WO-2",
+      "title": "Fix authentication bug in login system",
+      "description": "Users are unable to log in with special characters in passwords. Need to fix regex validation.",
+      "status": "queued",
+      "priority": "high",
+      "created_at": "2025-10-23T02:02:56.341029",
+      "updated_at": "2025-10-23T03:02:56.341040",
+      "assigned_to": "developer@company.com",
+      "due_date": null,
+      "tags": [
+        "bug",
+        "authentication",
+        "urgent"
+      ],
+      "metadata": {
+        "component": "auth",
+        "version": "2.1.0"
+      },
+      "source": "8090_factory"
+    },
+    {
+      "id": "WO-3",
+      "title": "Implement new dashboard feature",
+      "description": "Add a new analytics dashboard for user metrics and system performance monitoring.",
+      "status": "in_progress",
+      "priority": "medium",
+      "created_at": "2025-10-22T04:02:56.341048",
+      "updated_at": "2025-10-23T01:02:56.341049",
+      "assigned_to": "frontend@company.com",
+      "due_date": null,
+      "tags": [
+        "feature",
+        "dashboard",
+        "analytics"
+      ],
+      "metadata": {
+        "component": "frontend",
+        "version": "2.2.0"
+      },
+      "source": "8090_factory"
+    },
+    {
+      "id": "WO-4",
+      "title": "Update API documentation",
+      "description": "Update API documentation for new endpoints and add examples for all methods.",
+      "status": "queued",
+      "priority": "low",
+      "created_at": "2025-10-22T22:02:56.341053",
+      "updated_at": "2025-10-22T23:02:56.341055",
+      "assigned_to": "docs@company.com",
+      "due_date": null,
+      "tags": [
+        "documentation",
+        "api",
+        "maintenance"
+      ],
+      "metadata": {
+        "component": "docs",
+        "version": "2.1.0"
+      },
+      "source": "8090_factory"
+    },
+    {
+      "id": "WO-5",
+      "title": "Database optimization",
+      "description": "Optimize database queries and add proper indexing for better performance.",
+      "status": "completed",
+      "priority": "medium",
+      "created_at": "2025-10-20T04:02:56.341059",
+      "updated_at": "2025-10-22T04:02:56.341060",
+      "assigned_to": "dba@company.com",
+      "due_date": null,
+      "tags": [
+        "database",
+        "optimization",
+        "performance"
+      ],
+      "metadata": {
+        "component": "database",
+        "version": "1.5.0"
+      },
+      "source": "8090_factory"
+    },
+    {
+      "id": "WO-6",
+      "title": "Implement user notification system",
+      "description": "Create a comprehensive notification system for work order updates, status changes, and deadline reminders.",
+      "status": "queued",
+      "priority": "medium",
+      "created_at": "2025-10-23T00:02:56.341064",
+      "updated_at": "2025-10-23T01:02:56.341066",
+      "assigned_to": "backend@company.com",
+      "due_date": null,
+      "tags": [
+        "feature",
+        "notifications",
+        "user-experience"
+      ],
+      "metadata": {
+        "component": "backend",
+        "version": "2.3.0"
+      },
+      "source": "8090_factory"
+    },
+    {
+      "id": "WO-7",
+      "title": "Security audit and vulnerability assessment",
+      "description": "Conduct comprehensive security audit of the system and address any identified vulnerabilities.",
+      "status": "in_progress",
+      "priority": "high",
+      "created_at": "2025-10-21T04:02:56.341069",
+      "updated_at": "2025-10-23T02:02:56.341071",
+      "assigned_to": "security@company.com",
+      "due_date": null,
+      "tags": [
+        "security",
+        "audit",
+        "vulnerability",
+        "critical"
+      ],
+      "metadata": {
+        "component": "security",
+        "version": "1.0.0"
+      },
+      "source": "8090_factory"
+    }
+  ],
+  "statistics": {
+    "total_work_orders": 7,
+    "status_distribution": {
+      "queued": 3,
+      "in_progress": 3,
+      "completed": 1,
+      "failed": 0,
+      "cancelled": 0,
+      "pending_approval": 0,
+      "on_hold": 0
+    },
+    "priority_distribution": {
+      "low": 1,
+      "medium": 3,
+      "high": 3,
+      "urgent": 0,
+      "critical": 0
+    },
+    "assigned_count": 7,
+    "tags_count": 24,
+    "search_index_size": 149
+  },
+  "exported_at": "2025-10-23T04:02:56.341498"
+}
