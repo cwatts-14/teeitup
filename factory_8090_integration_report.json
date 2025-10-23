@@ -1,0 +1,55 @@
+{
+  "service_info": {
+    "url": "https://factory.8090.ai",
+    "title": "8090 Software Factory",
+    "status_code": 200,
+    "content_length": 479,
+    "service_details": {
+      "name": "viewport"
+    }
+  },
+  "content_analysis": {
+    "title": "8090 Software Factory",
+    "meta_tags": {
+      "viewport": "width=device-width, initial-scale=1.0"
+    },
+    "scripts": [
+      "/assets/index-CT6J1brf.js"
+    ],
+    "api_endpoints": [],
+    "forms": [],
+    "links": [],
+    "potential_apis": [],
+    "service_info": {
+      "name": "viewport"
+    }
+  },
+  "api_testing": {},
+  "recommendations": [
+    {
+      "type": "api_discovery",
+      "priority": "high",
+      "description": "No obvious API endpoints found. Consider browser automation.",
+      "action": "Implement Playwright or Selenium for service interaction"
+    },
+    {
+      "type": "javascript_analysis",
+      "priority": "medium",
+      "description": "Found 1 JavaScript files. May contain API calls.",
+      "action": "Analyze JavaScript files for hidden API endpoints"
+    },
+    {
+      "type": "monitoring",
+      "priority": "high",
+      "description": "Implement service monitoring and health checks.",
+      "action": "Set up regular health checks and alerting"
+    },
+    {
+      "type": "security",
+      "priority": "high",
+      "description": "Ensure secure integration practices.",
+      "action": "Implement proper authentication and data encryption"
+    }
+  ],
+  "integration_opportunities": []
+}
