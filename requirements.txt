@@ -7,3 +7,4 @@ structlog==23.2.0
 beautifulsoup4==4.12.2
 selenium==4.15.2
 pydantic==2.5.0
+python-dateutil==2.8.2
